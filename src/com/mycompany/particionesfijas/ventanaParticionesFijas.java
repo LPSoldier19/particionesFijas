@@ -1,5 +1,9 @@
 
 package com.mycompany.particionesfijas;
+/**
+ *
+ * @author Rafael Bautista 
+ */
 
 
 import javax.swing.table.DefaultTableModel;
@@ -28,7 +32,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtTamanioParticion = new javax.swing.JTextField();
-        btnAñadirParticion = new javax.swing.JButton();
+        btnAÃ±adirParticion = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -46,7 +50,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No. Particion", "Tamaño (KB)"
+                "No. Particion", "TamaÃ±o (KB)"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -60,27 +64,27 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tablaParticiones);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("Informe el tamaño de la partición a añadir:");
+        jLabel1.setText("Informe el tamaÃ±o de la particiÃ³n a aÃ±adir:");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Tamaño Partición:");
+        jLabel2.setText("TamaÃ±o ParticiÃ³n:");
         jLabel2.setToolTipText("");
 
         txtTamanioParticion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        btnAñadirParticion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnAñadirParticion.setText("Añadir Partición");
-        btnAñadirParticion.addActionListener(new java.awt.event.ActionListener() {
+        btnAÃ±adirParticion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnAÃ±adirParticion.setText("AÃ±adir ParticiÃ³n");
+        btnAÃ±adirParticion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAñadirParticionActionPerformed(evt);
+                btnAÃ±adirParticionActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("Tamaño limite: 1024 KB ");
+        jLabel3.setText("TamaÃ±o limite: 1024 KB ");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Tamaño disponible:");
+        jLabel4.setText("TamaÃ±o disponible:");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setText("KB");
@@ -95,7 +99,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
         });
 
         jToggleButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jToggleButton1.setText("Eliminar Partición");
+        jToggleButton1.setText("Eliminar ParticiÃ³n");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -103,7 +107,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Tamaño Proceso:");
+        jLabel5.setText("TamaÃ±o Proceso:");
         jLabel5.setToolTipText("");
 
         txtTamanioProceso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -124,7 +128,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6))
                     .addComponent(jToggleButton1)
-                    .addComponent(btnAñadirParticion)
+                    .addComponent(btnAÃ±adirParticion)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -150,7 +154,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTamanioProceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAñadirParticion)
+                .addComponent(btnAÃ±adirParticion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -170,7 +174,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
 
      int x = 1;
     
-    private void btnAñadirParticionActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+    private void btnAÃ±adirParticionActionPerformed(java.awt.event.ActionEvent evt) {                                                   
         DefaultTableModel tablaDatosParticiones=(DefaultTableModel) tablaParticiones.getModel(); 
  
         Object [] fila=new Object[2];
@@ -181,13 +185,13 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
         int actual = disponible-valorParticion;
         
         if(actual < 0){
-            showMessageDialog(null, "Ya no hay espacio para generar una partición nueva");
+            showMessageDialog(null, "Ya no hay espacio para generar una particiÃ³n nueva");
         }
         else if(Integer.parseInt(txtTamanioParticion.getText())== 0){
-            showMessageDialog(null, "El tamaño es invalido");
+            showMessageDialog(null, "El tamaÃ±o es invalido");
         }
         else if(Integer.parseInt(txtTamanioProceso.getText()) > Integer.parseInt(txtTamanioParticion.getText())){
-            showMessageDialog(null, "El tamaño del proceso no puede ser mayor al tamaño de la particion");
+            showMessageDialog(null, "El tamaÃ±o del proceso no puede ser mayor al tamaÃ±o de la particion");
         }
         else{
             fila[0]= x++;
@@ -256,7 +260,7 @@ public class ventanaParticionesFijas extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify                     
-    private javax.swing.JButton btnAñadirParticion;
+    private javax.swing.JButton btnAÃ±adirParticion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
