@@ -2,7 +2,7 @@ package com.mycompany.particionesfijas;
 
 /**
  *
- * @author LPSoldier19
+ * @author Rafael Bautista 
  */
 public class Main {
 
